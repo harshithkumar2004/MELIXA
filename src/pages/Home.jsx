@@ -6,7 +6,7 @@ export function Home() {
   return (
     <div className="home">
       <header className="home-header">
-        <h1>Welcome to Smart Playlist Matcher!</h1>
+        <h1>Welcome to Melixa!</h1>
         <p>Discover the mood of your music and get personalized recommendations</p>
         <Link to="/upload" className="upload-cta-button">
           <UploadCloud size={20} />

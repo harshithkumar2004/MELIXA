@@ -1,6 +1,4 @@
 .upload {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,30 +15,31 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #D4AF37;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .upload-container p {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #6b7280;
   margin-bottom: 3rem;
 }
 
 .upload-area {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px dashed rgba(255, 255, 255, 0.2);
+  background: #F5F5F5;
+  border: 2px dashed #D4AF37;
   border-radius: 20px;
   padding: 4rem 2rem;
   transition: all 0.3s ease;
   cursor: pointer;
+  animation: fadeIn 0.8s ease-out 0.1s both;
 }
 
 .upload-area:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(102, 126, 234, 0.5);
+  background: #ECECEC;
+  border-color: #F0E68C;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  transform: scale(1.02);
 }
 
 .upload-content {
@@ -51,14 +50,14 @@
 }
 
 .upload-icon {
-  color: #667eea;
+  color: #D4AF37;
   margin-bottom: 1rem;
 }
 
 .upload-content h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: #2c2c2c;
   margin-bottom: 1rem;
 }
 
@@ -66,8 +65,8 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #D4AF37;
+  color: #1a1a1a;
   border: none;
   padding: 1rem 2rem;
   border-radius: 25px;
@@ -75,16 +74,35 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.upload-btn:hover::after {
+  left: 100%;
 }
 
 .upload-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(212, 175, 55, 0.3);
+  background: #F0E68C;
+  animation: heartbeat 0.6s ease-out;
 }
 
 .supported-formats {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: #9ca3af;
   margin-top: 1rem;
 }
 
@@ -99,8 +117,8 @@
 .spinner {
   width: 40px;
   height: 40px;
-  border: 4px solid rgba(255, 255, 255, 0.1);
-  border-top: 4px solid #667eea;
+  border: 4px solid rgba(30, 64, 175, 0.1);
+  border-top: 4px solid #1e40af;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -110,24 +128,28 @@
   100% { transform: rotate(360deg); }
 }
 
+
+
 .upload-loading p {
-  color: rgba(255, 255, 255, 0.7);
+  color: #6b7280;
   font-size: 1rem;
 }
 
 /* Mood Result Container */
 .mood-result-container {
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.mood-classification {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 2rem;
-  margin-bottom: 3rem;
-  backdrop-filter: blur(10px);
+.back-button:hover {
+  background: rgba(30, 64, 175, 0.2);
+  color: #1e3a8a;
 }
 
 .mood-header {
@@ -139,14 +161,18 @@
 
 .mood-header h2 {
   font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffffff;
+  color: #10b981;
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  display: inline-block;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+  animation: mood-glow 2s ease-in-out infinite;
 }
 
 .back-button {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.8);
+  background: rgba(30, 64, 175, 0.1);
+  border: 1px solid rgba(30, 64, 175, 0.3);
+  color: #1e40af;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -154,8 +180,8 @@
 }
 
 .back-button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: rgba(30, 64, 175, 0.2);
+  color: #1e3a8a;
 }
 
 .mood-display {
@@ -164,11 +190,12 @@
 }
 
 .mood-badge {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+  background: #10b981;
   border-radius: 15px;
   padding: 1.5rem 2rem;
   display: inline-block;
-  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+  animation: mood-glow 2s ease-in-out infinite;
 }
 
 .mood-text {
@@ -177,6 +204,15 @@
   color: #ffffff;
   display: block;
   margin-bottom: 0.5rem;
+}
+
+@keyframes mood-glow {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 12px 35px rgba(16, 185, 129, 0.5);
+  }
 }
 
 .confidence {
@@ -191,7 +227,7 @@
 .analysis-details h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #2c2c2c;
   margin-bottom: 1rem;
 }
 
@@ -202,8 +238,8 @@
 }
 
 .analysis-item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(139, 69, 19, 0.05);
+  border: 1px solid rgba(139, 69, 19, 0.2);
   border-radius: 12px;
   padding: 1.5rem;
 }
@@ -211,19 +247,19 @@
 .analysis-item h4 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #4ECDC4;
+  color: #8b4513;
   margin-bottom: 0.75rem;
 }
 
 .analysis-item p {
-  color: rgba(255, 255, 255, 0.7);
+  color: #5d4e37;
   line-height: 1.5;
 }
 
 /* Recommendations Section */
 .recommendations-section {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(245, 245, 220, 0.8);
+  border: 1px solid rgba(139, 69, 19, 0.2);
   border-radius: 20px;
   padding: 2rem;
   backdrop-filter: blur(10px);
@@ -232,14 +268,14 @@
 .recommendations-section h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #2c2c2c;
   margin-bottom: 1rem;
   text-align: center;
 }
 
 .recommendations-section > p {
   text-align: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: #5d4e37;
   margin-bottom: 2rem;
   font-size: 1.1rem;
 }
@@ -252,26 +288,27 @@
 }
 
 .recommendation-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(139, 69, 19, 0.08);
+  border: 1px solid rgba(139, 69, 19, 0.2);
   border-radius: 12px;
-  padding: 1rem;
+  padding: 1.2rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .recommendation-card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(102, 126, 234, 0.5);
-  transform: translateY(-2px);
+  background: rgba(139, 69, 19, 0.15);
+  border-color: rgba(139, 69, 19, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(139, 69, 19, 0.15);
 }
 
 .song-artwork {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   border-radius: 8px;
   overflow: hidden;
   flex-shrink: 0;
@@ -280,11 +317,11 @@
 .artwork-placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #8b4513 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .song-info {
@@ -293,41 +330,65 @@
 }
 
 .song-info h4 {
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.3rem;
+  word-break: break-word;
+}
+
+.song-info .artist {
+  font-size: 0.9rem;
+  color: #5d4e37;
+  margin-bottom: 0.5rem;
+}
+
+.song-details {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mood-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #D4AF37 0%, #F0E68C 100%);
+  color: #1a1a1a;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 0.25rem;
+  text-transform: capitalize;
 }
 
-.song-info p {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 0.25rem;
-}
-
-.song-duration {
+.similarity {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: #8b7355;
+  font-weight: 500;
 }
 
 .play-song-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(139, 69, 19, 0.2);
+}
   font-size: 0.8rem;
 }
 
 .play-song-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);
 }
 
 .recommendation-actions {
@@ -338,7 +399,7 @@
 }
 
 .create-playlist-btn {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -350,13 +411,13 @@
 
 .create-playlist-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
 }
 
 .find-more-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.9);
+  background: rgba(139, 69, 19, 0.1);
+  border: 1px solid rgba(139, 69, 19, 0.3);
+  color: #5d4e37;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   font-weight: 600;
@@ -365,9 +426,148 @@
 }
 
 .find-more-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(139, 69, 19, 0.2);
+  border-color: rgba(139, 69, 19, 0.4);
   transform: translateY(-2px);
+}
+
+/* Additional Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes bounceInUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animations to elements */
+.recommendation-card {
+  animation: slideUp 0.5s ease-out;
+}
+
+.recommendation-card:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.recommendation-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.recommendation-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.analysis-item {
+  animation: slideIn 0.5s ease-out;
+}
+
+.analysis-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.analysis-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.analysis-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.create-playlist-btn:hover {
+  animation: bounce 0.6s ease-out;
+}
+
+.upload-icon {
+  animation: pulse 2s ease-in-out infinite;
 }
 
 /* Responsive Design */

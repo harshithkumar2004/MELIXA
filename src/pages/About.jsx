@@ -4,18 +4,16 @@ export function About() {
   return (
     <div className="about">
       <div className="about-container">
-        <h1>About Smart Playlist Matcher</h1>
+        <h1 className="page-title">About Melixa</h1>
         
-        <section className="about-section">
+        <section className="about-section section-fade-in">
           <h2>Our Mission</h2>
           <p>
-            Smart Playlist Matcher uses advanced AI technology to analyze your music and create 
-            perfectly curated playlists based on your mood. Whether you're looking for energy, 
-            relaxation, or inspiration, we've got the perfect soundtrack for every moment.
+           Melixa leverages advanced AI to analyze audio and accurately identify user mood. Based on this analysis, it delivers personalized music recommendations tailored to each emotional state.
           </p>
         </section>
         
-        <section className="about-section">
+        <section className="about-section section-fade-in">
           <h2>How It Works</h2>
           <div className="features-grid">
             <div className="feature-card">
@@ -31,20 +29,11 @@ export function About() {
             <div className="feature-card">
               <div className="feature-icon">🎯</div>
               <h3>Perfect Match</h3>
-              <p>Get personalized playlists that match your vibe</p>
+              <p>Get personalized recommendations that match your vibe</p>
             </div>
           </div>
         </section>
-        
-        <section className="about-section">
-          <h2>Why Choose Us?</h2>
-          <ul className="benefits-list">
-            <li>Lightning-fast mood detection</li>
-            <li>Support for multiple audio formats</li>
-            <li>Personalized recommendations</li>
-            <li>Beautiful, intuitive interface</li>
-          </ul>
-        </section>
+
       </div>
     </div>
   )
