@@ -1,8 +1,8 @@
 .app {
   display: flex;
   height: 100vh;
-  background: #ffffff;
-  color: #1f2937;
+  background: var(--primary-50);
+  color: var(--primary-900);
 }
 
 .main-content {
@@ -20,16 +20,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #E8E8E8;
+  background: var(--primary-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
+  background: var(--accent-400);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F0E68C;
+  background: var(--accent-500);
 }
 
 @keyframes fadeIn {
@@ -65,13 +65,13 @@
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 5px rgba(245, 158, 11, 0.3);
   }
   50% {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
   }
   100% {
-    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 5px rgba(245, 158, 11, 0.3);
   }
 }
 

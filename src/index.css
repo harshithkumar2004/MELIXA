@@ -3,9 +3,36 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: #1f2937;
-  background-color: #ffffff;
+  color-scheme: light;
+  color: #1a1d23;
+  background-color: #fafbfc;
+
+  --primary-50: #f8fafc;
+  --primary-100: #f1f5f9;
+  --primary-200: #e2e8f0;
+  --primary-300: #cbd5e1;
+  --primary-400: #94a3b8;
+  --primary-500: #64748b;
+  --primary-600: #475569;
+  --primary-700: #334155;
+  --primary-800: #1e293b;
+  --primary-900: #0f172a;
+
+  --accent-50: #fef7ed;
+  --accent-100: #fdedd3;
+  --accent-200: #fbd8a8;
+  --accent-300: #f9bc5f;
+  --accent-400: #f59e0b;
+  --accent-500: #d97706;
+  --accent-600: #b45309;
+  --accent-700: #92400e;
+  --accent-800: #78350f;
+  --accent-900: #451a03;
+
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,7 +53,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: #ffffff;
+  background: var(--primary-50);
 }
 
 #root {
