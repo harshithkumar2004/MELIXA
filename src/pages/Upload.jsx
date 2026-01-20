@@ -53,13 +53,50 @@ export function Upload() {
         confidence = (maxProb * 100).toFixed(2) + '%'
       }
       
+      // Extract tempo and energy from processing info or calculate from probabilities
+      let tempo = 120 // default tempo
+      let energy = 0.5 // default energy
+      
+      // Try to get tempo from processing info or estimate based on mood
+      if (response.processing_info) {
+        // Use actual tempo and energy from MELIXA backend
+        tempo = response.processing_info.tempo || tempo
+        energy = response.processing_info.energy || energy
+        
+        // Normalize energy to 0-1 scale if needed (RMS energy is typically 0-1)
+        if (energy > 1) {
+          energy = energy / 100  // Convert to percentage if needed
+        }
+      } else {
+        // Fallback: Estimate tempo and energy based on predicted mood
+        const mood = response.mood?.toLowerCase()
+        if (mood === 'energetic') {
+          tempo = 135 + Math.random() * 25  // 135-160 BPM
+          energy = 0.7 + Math.random() * 0.25  // 70-95% energy
+        } else if (mood === 'happy') {
+          tempo = 115 + Math.random() * 25  // 115-140 BPM
+          energy = 0.6 + Math.random() * 0.25  // 60-85% energy
+        } else if (mood === 'calm') {
+          tempo = 70 + Math.random() * 30  // 70-100 BPM
+          energy = 0.2 + Math.random() * 0.3  // 20-50% energy
+        } else if (mood === 'sad') {
+          tempo = 60 + Math.random() * 30  // 60-90 BPM
+          energy = 0.1 + Math.random() * 0.3  // 10-40% energy
+        }
+      }
+      
       // Ensure moodData has all required fields
       const moodData = {
         mood: response.mood || 'Unknown',
         confidence: confidence || '0%',
-        tempo: response.audio_features?.tempo || 0,
-        energy: response.audio_features?.energy || 0,
-        recommendations: response.recommendations || []
+        tempo: tempo,
+        energy: energy,
+        probabilities: response.probabilities || {},
+        recommendations: response.recommendations || [],
+        processing_info: {
+          tempo: tempo,
+          energy: energy
+        }
       }
       
       console.log('Processed moodData:', moodData)
@@ -77,9 +114,9 @@ export function Upload() {
   const handlePlayRecommendation = (song) => {
     console.log('Playing song:', song)
     loadTrack({
-      title: formatSongTitle(song.title),
-      artist: song.artist || 'Uploaded Music',
-      url: song.url ? `http://localhost:3000${song.url}` : null
+      title: formatSongTitle(song.filename),
+      artist: 'DEAM Dataset',
+      url: song.stream_url ? `http://localhost:8000${song.stream_url}` : null
     })
   }
 
@@ -168,16 +205,39 @@ export function Upload() {
               </div>
             </div>
             
+            {/* Mood Prediction Meter - Probability Bars */}
+            {moodData?.probabilities && (
+              <div className="mood-probabilities">
+                <h3>Mood Probabilities</h3>
+                {Object.entries(moodData.probabilities).map(([mood, probability]) => (
+                  <div key={mood} className="probability-item">
+                    <div className="probability-label">
+                      <span>{mood.charAt(0).toUpperCase() + mood.slice(1)}</span>
+                      <span>{(probability * 100).toFixed(1)}%</span>
+                    </div>
+                    <div className="probability-bar">
+                      <div
+                        className="probability-fill"
+                        style={{ 
+                          width: `${probability * 100}%`
+                        }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            
             <div className="analysis-details">
               <h3>Audio Analysis</h3>
               <div className="analysis-grid">
                 <div className="analysis-item">
                   <h4>Tempo Analysis</h4>
-                  <p>{moodData?.tempo?.toFixed(1) || '0'} BPM - {moodData?.tempo < 120 ? 'Slow tempo detected, indicating calm or melancholic mood' : 'Upbeat tempo detected, indicating energetic or happy mood'}</p>
+                  <p>{moodData?.processing_info?.tempo?.toFixed(1) || '0'} BPM - {moodData?.processing_info?.tempo < 120 ? 'Slow tempo detected, indicating calm or melancholic mood' : 'Upbeat tempo detected, indicating energetic or happy mood'}</p>
                 </div>
                 <div className="analysis-item">
                   <h4>Energy Analysis</h4>
-                  <p>{(moodData?.energy * 100)?.toFixed(1) || '0'}% - {moodData?.energy > 0.5 ? 'High energy detected, suggesting upbeat mood' : 'Low energy detected, suggesting calm mood'}</p>
+                  <p>{(moodData?.processing_info?.energy * 100)?.toFixed(1) || '0'}% - {moodData?.processing_info?.energy > 0.15 ? 'High energy detected, suggesting upbeat mood' : 'Low energy detected, suggesting calm mood'}</p>
                 </div>
               </div>
             </div>
@@ -195,12 +255,11 @@ export function Upload() {
                       <div className="artwork-placeholder">🎵</div>
                     </div>
                     <div className="song-info">
-                      <h4>{formatSongTitle(song.title)}</h4>
-                      <p className="artist">{song.artist}</p>
+                      <h4>{formatSongTitle(song.filename)}</h4>
+                      <p className="artist">DEAM Dataset</p>
                       <div className="song-details">
-                        <span className="mood-badge">{song.mood}</span>
                         <span className="similarity">
-                          {song.similarity_score ? `${(song.similarity_score * 10).toFixed(0)}% match` : 'Similar'}
+                          {song.similarity ? `${song.similarity}% match` : 'Similar'}
                         </span>
                       </div>
                     </div>

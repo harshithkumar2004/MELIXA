@@ -74,23 +74,6 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-size: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.upload-btn::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.5s;
-}
-
-.upload-btn:hover::after {
-  left: 100%;
 }
 
 .upload-btn:hover {
@@ -128,11 +111,81 @@
   100% { transform: rotate(360deg); }
 }
 
-
-
 .upload-loading p {
   color: #6b7280;
   font-size: 1rem;
+}
+
+/* Mood Probabilities - Probability Bars - Clean Brown Design */
+.mood-probabilities {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(245, 245, 220, 0.8);
+  border: 1px solid rgba(139, 69, 19, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.mood-probabilities h3 {
+  margin-bottom: 1.5rem;
+  color: #8b4513;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.probability-item {
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(139, 69, 19, 0.15);
+}
+
+.probability-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5d4e37;
+}
+
+.probability-label span:first-child {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #8b4513;
+}
+
+.probability-label span:last-child {
+  font-weight: 700;
+  color: #D4AF37;
+  background: rgba(212, 175, 55, 0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.probability-bar {
+  width: 100%;
+  height: 12px;
+  background: rgba(139, 69, 19, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(139, 69, 19, 0.3);
+  position: relative;
+}
+
+.probability-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #8b4513 0%, #D4AF37 100%);
+  border-radius: 5px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  min-width: 2px;
+  box-shadow: 0 0 10px rgba(139, 69, 19, 0.3);
 }
 
 /* Mood Result Container */
@@ -334,7 +387,6 @@
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 0.3rem;
-  word-break: break-word;
 }
 
 .song-info .artist {
@@ -382,8 +434,6 @@
   font-size: 1.2rem;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(139, 69, 19, 0.2);
-}
-  font-size: 0.8rem;
 }
 
 .play-song-btn:hover {
@@ -564,10 +614,6 @@
 
 .create-playlist-btn:hover {
   animation: bounce 0.6s ease-out;
-}
-
-.upload-icon {
-  animation: pulse 2s ease-in-out infinite;
 }
 
 /* Responsive Design */
