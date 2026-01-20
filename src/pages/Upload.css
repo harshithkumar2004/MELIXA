@@ -254,7 +254,7 @@
 .mood-text {
   font-size: 2rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #8b4513;
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -270,7 +270,7 @@
 
 .confidence {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #8b4513;
 }
 
 .analysis-details {
