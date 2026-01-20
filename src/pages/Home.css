@@ -93,10 +93,10 @@
 
 @keyframes title-glow {
   0%, 100% {
-    text-shadow: 0 0 10px rgba(30, 64, 175, 0.3);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
   }
   50% {
-    text-shadow: 0 0 20px rgba(30, 64, 175, 0.5);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
   }
 }
 
@@ -106,8 +106,8 @@
 }
 
 .demo-banner {
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 165, 0, 0.1) 100%);
-  border: 1px solid rgba(255, 107, 53, 0.3);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(240, 230, 140, 0.1) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
@@ -115,8 +115,8 @@
 }
 
 .demo-badge {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
-  color: white;
+  background: linear-gradient(135deg, #D4AF37 0%, #F0E68C 100%);
+  color: #1f2937;
   padding: 0.25rem 1rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -126,7 +126,7 @@
 }
 
 .demo-banner p {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(31, 41, 55, 0.8);
   margin: 0;
 }
 
@@ -136,8 +136,8 @@
 }
 
 .upload-area-demo {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px dashed rgba(102, 126, 234, 0.5);
+  background: rgba(212, 175, 55, 0.05);
+  border: 2px dashed rgba(212, 175, 55, 0.5);
   border-radius: 20px;
   padding: 3rem 2rem;
   text-align: center;
@@ -148,25 +148,25 @@
 }
 
 .upload-area-demo:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(102, 126, 234, 0.8);
+  background: rgba(212, 175, 55, 0.08);
+  border-color: rgba(212, 175, 55, 0.8);
   transform: translateY(-2px);
 }
 
 .upload-icon {
-  color: #667eea;
+  color: #D4AF37;
   margin-bottom: 1rem;
 }
 
 .upload-area-demo h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #1f2937;
   margin-bottom: 0.5rem;
 }
 
 .upload-area-demo p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(31, 41, 55, 0.6);
   font-size: 0.9rem;
 }
 
@@ -179,8 +179,8 @@
 }
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.1);
   border-radius: 16px;
   padding: 1.5rem;
   display: flex;
@@ -192,11 +192,11 @@
 
 .stat-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.2);
 }
 
 .stat-icon {
-  color: #667eea;
+  color: #D4AF37;
   flex-shrink: 0;
 }
 
@@ -204,11 +204,11 @@
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
-  color: #ffffff;
+  color: #1f2937;
 }
 
 .stat-content p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(31, 41, 55, 0.6);
   font-size: 0.9rem;
 }
 
@@ -219,8 +219,8 @@
 }
 
 .mood-classification {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.1);
   border-radius: 20px;
   padding: 2rem;
   margin-bottom: 3rem;
@@ -237,13 +237,13 @@
 .mood-header h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #1f2937;
 }
 
 .back-button {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.8);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: rgba(31, 41, 55, 0.8);
   padding: 0.5rem 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -251,8 +251,8 @@
 }
 
 .back-button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: rgba(212, 175, 55, 0.2);
+  color: #1f2937;
 }
 
 .mood-display {
@@ -261,24 +261,24 @@
 }
 
 .mood-badge {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #F0E68C 100%);
   border-radius: 15px;
   padding: 1.5rem 2rem;
   display: inline-block;
-  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
 }
 
 .mood-text {
   font-size: 2rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #1f2937;
   display: block;
   margin-bottom: 0.5rem;
 }
 
 .confidence {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(31, 41, 55, 0.9);
 }
 
 .analysis-details {
@@ -288,7 +288,7 @@
 .analysis-details h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #1f2937;
   margin-bottom: 1rem;
 }
 
@@ -299,8 +299,8 @@
 }
 
 .analysis-item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(212, 175, 55, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.1);
   border-radius: 12px;
   padding: 1.5rem;
 }
@@ -308,19 +308,19 @@
 .analysis-item h4 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #4ECDC4;
+  color: #D4AF37;
   margin-bottom: 0.75rem;
 }
 
 .analysis-item p {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(31, 41, 55, 0.7);
   line-height: 1.5;
 }
 
 /* Recommendations Section */
 .recommendations-section {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.1);
   border-radius: 20px;
   padding: 2rem;
   backdrop-filter: blur(10px);
@@ -329,14 +329,14 @@
 .recommendations-section h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #1f2937;
   margin-bottom: 1rem;
   text-align: center;
 }
 
 .recommendations-section > p {
   text-align: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(31, 41, 55, 0.7);
   margin-bottom: 2rem;
   font-size: 1.1rem;
 }
@@ -349,8 +349,8 @@
 }
 
 .recommendation-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.15);
   border-radius: 12px;
   padding: 1rem;
   display: flex;
@@ -361,8 +361,8 @@
 }
 
 .recommendation-card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(102, 126, 234, 0.5);
+  background: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.5);
   transform: translateY(-2px);
 }
 
@@ -377,7 +377,7 @@
 .artwork-placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #F0E68C 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -392,28 +392,28 @@
 .song-info h4 {
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #1f2937;
   margin-bottom: 0.25rem;
 }
 
 .song-info p {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(31, 41, 55, 0.6);
   margin-bottom: 0.25rem;
 }
 
 .song-duration {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(31, 41, 55, 0.5);
 }
 
 .play-song-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #F0E68C 100%);
   border: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  color: white;
+  color: #1f2937;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
@@ -424,7 +424,7 @@
 
 .play-song-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
 }
 
 .recommendation-actions {
@@ -435,8 +435,8 @@
 }
 
 .create-playlist-btn {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
+  background: linear-gradient(135deg, #D4AF37 0%, #F0E68C 100%);
+  color: #1f2937;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
@@ -447,13 +447,13 @@
 
 .create-playlist-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
 .find-more-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.9);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: rgba(31, 41, 55, 0.9);
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   font-weight: 600;
@@ -462,8 +462,8 @@
 }
 
 .find-more-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.3);
   transform: translateY(-2px);
 }
 
