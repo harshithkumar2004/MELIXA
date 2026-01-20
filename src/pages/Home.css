@@ -11,39 +11,44 @@
 
 .home-header h1 {
   font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-weight: 800;
+  margin-bottom: var(--space);
   color: var(--primary-900);
   animation: fadeIn 0.8s ease-out;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .home-header p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: var(--primary-600);
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg);
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .upload-cta-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  background: linear-gradient(135deg, var(--accent-400) 0%, var(--accent-500) 100%);
+  gap: var(--space-sm);
+  background: var(--gradient-primary);
   color: white;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 30px;
+  padding: var(--space) var(--space-lg);
+  border-radius: var(--radius-xl);
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  box-shadow: var(--shadow-lg);
   position: relative;
   overflow: hidden;
   animation: slideInLeft 0.8s ease-out 0.2s both;
+  backdrop-filter: blur(10px);
 }
 
 .upload-cta-button::before {
@@ -65,8 +70,8 @@
 }
 
 .upload-cta-button:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-xl);
   background: linear-gradient(135deg, var(--accent-500) 0%, var(--accent-600) 100%);
   animation: bounce 0.6s ease-out;
 }
@@ -106,23 +111,26 @@
 }
 
 .demo-banner {
-  background: linear-gradient(135deg, var(--accent-50) 0%, var(--accent-100) 100%);
+  background: var(--gradient-subtle);
   border: 1px solid var(--accent-200);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg);
+  box-shadow: var(--shadow);
 }
 
 .demo-badge {
-  background: linear-gradient(135deg, var(--accent-400) 0%, var(--accent-500) 100%);
+  background: var(--gradient-primary);
   color: white;
-  padding: 0.25rem 1rem;
-  border-radius: 20px;
+  padding: var(--space-xs) var(--space);
+  border-radius: var(--radius-xl);
   font-size: 0.8rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-sm);
   display: inline-block;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .demo-banner p {
@@ -136,21 +144,23 @@
 }
 
 .upload-area-demo {
-  background: var(--primary-50);
+  background: white;
   border: 2px dashed var(--accent-300);
-  border-radius: 20px;
-  padding: 3rem 2rem;
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-lg);
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   max-width: 400px;
   width: 100%;
+  box-shadow: var(--shadow);
 }
 
 .upload-area-demo:hover {
   background: var(--accent-50);
   border-color: var(--accent-400);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .upload-icon {
@@ -162,39 +172,59 @@
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--primary-900);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.01em;
 }
 
 .upload-area-demo p {
   color: var(--primary-600);
   font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 /* Stats Grid */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
 }
 
 .stat-card {
   background: white;
   border: 1px solid var(--primary-200);
-  border-radius: 16px;
-  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space);
   backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .stat-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(245, 158, 11, 0.15);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
   border-color: var(--accent-300);
+}
+
+.stat-card:hover::before {
+  opacity: 1;
 }
 
 .stat-icon {
@@ -203,15 +233,19 @@
 }
 
 .stat-content h3 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: var(--space-xs);
   color: var(--primary-900);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .stat-content p {
   color: var(--primary-600);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 /* Mood Result Container */
@@ -223,11 +257,23 @@
 .mood-classification {
   background: white;
   border: 1px solid var(--primary-200);
-  border-radius: 20px;
-  padding: 2rem;
-  margin-bottom: 3rem;
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
   backdrop-filter: blur(10px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.mood-classification::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--gradient-primary);
 }
 
 .mood-header {
@@ -238,24 +284,30 @@
 }
 
 .mood-header h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--primary-900);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .back-button {
   background: var(--primary-100);
   border: 1px solid var(--primary-300);
   color: var(--primary-700);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: var(--space-sm) var(--space);
+  border-radius: var(--radius);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .back-button:hover {
   background: var(--primary-200);
   color: var(--primary-900);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
 }
 
 .mood-display {
@@ -264,24 +316,46 @@
 }
 
 .mood-badge {
-  background: linear-gradient(135deg, var(--accent-400) 0%, var(--accent-500) 100%);
-  border-radius: 15px;
-  padding: 1.5rem 2rem;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
   display: inline-block;
-  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.mood-badge::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
 }
 
 .mood-text {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.25rem;
+  font-weight: 900;
   color: white;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
 }
 
 .confidence {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
 }
 
 .analysis-details {
@@ -324,59 +398,95 @@
 .recommendations-section {
   background: white;
   border: 1px solid var(--primary-200);
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
   backdrop-filter: blur(10px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.recommendations-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--gradient-primary);
 }
 
 .recommendations-section h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--primary-900);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space);
   text-align: center;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .recommendations-section > p {
   text-align: center;
   color: var(--primary-600);
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
+  margin-bottom: var(--space-xl);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .recommendations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
 }
 
 .recommendation-card {
-  background: var(--primary-50);
+  background: white;
   border: 1px solid var(--primary-200);
-  border-radius: 12px;
-  padding: 1rem;
+  border-radius: var(--radius-lg);
+  padding: var(--space);
   display: flex;
   align-items: center;
-  gap: 1rem;
-  transition: all 0.3s ease;
+  gap: var(--space);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.recommendation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .recommendation-card:hover {
   background: var(--accent-50);
   border-color: var(--accent-300);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.1);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.recommendation-card:hover::before {
+  opacity: 1;
 }
 
 .song-artwork {
-  width: 60px;
-  height: 60px;
-  border-radius: 8px;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius);
   overflow: hidden;
   flex-shrink: 0;
+  box-shadow: var(--shadow);
 }
 
 .artwork-placeholder {
@@ -395,16 +505,19 @@
 }
 
 .song-info h4 {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: var(--primary-900);
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
 }
 
 .song-info p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--primary-600);
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-xs);
+  line-height: 1.4;
 }
 
 .song-duration {
@@ -413,23 +526,24 @@
 }
 
 .play-song-btn {
-  background: linear-gradient(135deg, var(--accent-400) 0%, var(--accent-500) 100%);
+  background: var(--gradient-primary);
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
+  box-shadow: var(--shadow);
 }
 
 .play-song-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+  box-shadow: var(--shadow-lg);
 }
 
 .recommendation-actions {
@@ -440,37 +554,42 @@
 }
 
 .create-playlist-btn {
-  background: linear-gradient(135deg, var(--accent-400) 0%, var(--accent-500) 100%);
+  background: var(--gradient-primary);
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-xl);
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow);
+  letter-spacing: 0.01em;
 }
 
 .create-playlist-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+  box-shadow: var(--shadow-xl);
+  background: linear-gradient(135deg, var(--accent-500) 0%, var(--accent-600) 100%);
 }
 
 .find-more-btn {
   background: var(--primary-100);
   border: 1px solid var(--primary-300);
   color: var(--primary-700);
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-xl);
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.01em;
 }
 
 .find-more-btn:hover {
   background: var(--primary-200);
-  border-color: var(--primary-400);
+  border-color: var(--accent-300);
   color: var(--primary-900);
   transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 /* Responsive Design */
