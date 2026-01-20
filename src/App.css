@@ -15,7 +15,7 @@
   background: var(--primary-50);
 }
 
-/* Professional Scrollbar - Amber Theme */
+/* Professional Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -25,12 +25,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--amber);
+  background: var(--accent-400);
   border-radius: var(--radius-sm);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--amber-dark);
+  background: var(--accent-500);
 }
 
 @keyframes fadeIn {

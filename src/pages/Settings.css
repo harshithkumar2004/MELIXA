@@ -12,7 +12,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -53,7 +53,7 @@
 }
 
 .section-header svg {
-  color: var(--amber);
+  color: #667eea;
 }
 
 .settings-content {

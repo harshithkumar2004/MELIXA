@@ -19,7 +19,7 @@
   --primary-800: #1e293b;
   --primary-900: #0f172a;
 
-  /* Professional Accent Palette - Single Amber Color */
+  /* Professional Accent Palette */
   --accent-50: #fffbeb;
   --accent-100: #fef3c7;
   --accent-200: #fde68a;
@@ -30,11 +30,6 @@
   --accent-700: #b45309;
   --accent-800: #92400e;
   --accent-900: #78350f;
-
-  /* Primary Amber Color for Consistency */
-  --amber: #f59e0b;
-  --amber-light: #fcd34d;
-  --amber-dark: #d97706;
 
   /* Semantic Colors */
   --success: #059669;
@@ -49,8 +44,8 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
-  /* Professional Gradients - Single Amber Theme */
-  --gradient-primary: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+  /* Professional Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--accent-400) 0%, var(--accent-500) 100%);
   --gradient-subtle: linear-gradient(135deg, var(--accent-50) 0%, var(--accent-100) 100%);
   --gradient-dark: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
 

@@ -42,7 +42,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--amber);
+  color: #D4AF37;
   animation: fadeIn 0.8s ease-out;
 }
 
@@ -107,7 +107,7 @@
 /* Feature card - styled box with hover effects */
 .feature-card {
   background: #F5F5F5;
-  border: 2px solid var(--amber);
+  border: 2px solid #D4AF37;
   border-radius: 15px;
   padding: 2rem;
   text-align: center;
@@ -131,16 +131,16 @@
 
 .feature-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.2);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
   background: #ECECEC;
-  border-color: var(--amber);
+  border-color: #F0E68C;
 }
 
 /* Feature icon - styled emoji container with animations */
 .feature-icon {
   width: 60px;
   height: 60px;
-  background: var(--amber);
+  background: #D4AF37;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -148,7 +148,7 @@
   margin: 0 auto 1.5rem;
   font-size: 1.5rem;
   color: #1a1a1a;
-  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.25);
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.25);
   animation: bounce 2s ease-in-out infinite;
 }
 
@@ -251,7 +251,7 @@
 .benefit-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+  background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -303,7 +303,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+  background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -316,7 +316,7 @@
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
 }
 
 /* ========== ANIMATIONS ========== */
