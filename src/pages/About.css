@@ -42,7 +42,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #D4AF37;
+  color: #FFD300;
   animation: fadeIn 0.8s ease-out;
 }
 
@@ -107,7 +107,7 @@
 /* Feature card - styled box with hover effects */
 .feature-card {
   background: #F5F5F5;
-  border: 2px solid #D4AF37;
+  border: 2px solid #FFD300;
   border-radius: 15px;
   padding: 2rem;
   text-align: center;
@@ -131,16 +131,16 @@
 
 .feature-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 8px 25px rgba(255, 211, 0, 0.2);
   background: #ECECEC;
-  border-color: #F0E68C;
+  border-color: #FFED4E;
 }
 
 /* Feature icon - styled emoji container with animations */
 .feature-icon {
   width: 60px;
   height: 60px;
-  background: #D4AF37;
+  background: #FFD300;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -148,7 +148,7 @@
   margin: 0 auto 1.5rem;
   font-size: 1.5rem;
   color: #1a1a1a;
-  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 4px 10px rgba(255, 211, 0, 0.25);
   animation: bounce 2s ease-in-out infinite;
 }
 
@@ -428,10 +428,10 @@
 /* Pulse animation - icon pulsing effect */
 @keyframes pulse {
   0%, 100% {
-    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 4px 10px rgba(255, 211, 0, 0.25);
   }
   50% {
-    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 4px 20px rgba(255, 211, 0, 0.4);
   }
 }
 
