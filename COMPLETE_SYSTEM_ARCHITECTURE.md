@@ -31,7 +31,7 @@ SmartPlay is a **three-tier microservices architecture** that provides AI-powere
 
 ### **1. Frontend Layer (Presentation)**
 
-#### ** React Application**
+#### **React Application**
 ```
 smartplay-frontend/
 ├──  User Interface Components
@@ -56,7 +56,7 @@ smartplay-frontend/
     └── Hot module replacement  # Development efficiency
 ```
 
-#### ** Frontend Specifications**
+#### **Frontend Specifications**
 - **Framework**: React 18 + Vite 5.4.21
 - **Port**: 3001 (development)
 - **Build Tool**: Vite (optimized bundling)
@@ -69,7 +69,7 @@ smartplay-frontend/
 
 ### **2. Backend Layer (Services)**
 
-#### ** API Gateway (Node.js)**
+#### **API Gateway (Node.js)**
 ```
 backend/api/
 ├──  Server Core
@@ -93,7 +93,7 @@ backend/api/
     └── Rate limiting           # Protection against abuse
 ```
 
-#### ** ML Service (Python FastAPI)**
+#### **ML Service (Python FastAPI)**
 ```
 backend/ml/
 ├──  Core ML Engine
@@ -127,7 +127,7 @@ backend/ml/
 
 ### **3. Data Layer (Storage)**
 
-#### ** DEAM Dataset**
+#### **DEAM Dataset**
 ```
 deam/
 ├──  Audio Storage
@@ -151,7 +151,7 @@ deam/
     └── performance-metrics.json # Processing statistics
 ```
 
-#### ** Model Storage**
+#### **Model Storage**
 ```
 models/
 ├──  Trained Models
@@ -260,7 +260,7 @@ models/
 
 ##  **Technology Stack Architecture**
 
-### ** Frontend Technology Stack**
+### **Frontend Technology Stack**
 ```
  Client Layer
 ├──  Framework: React 18.0+
@@ -289,7 +289,7 @@ models/
     └── Error handling
 ```
 
-### ** Backend Technology Stack**
+### **Backend Technology Stack**
 ```
  Service Layer
 ├──  API Gateway: Node.js + Express
@@ -323,7 +323,7 @@ models/
 
 ##  **Database Architecture**
 
-### ** Feature Database Design**
+### **Feature Database Design**
 ```json
 {
   "features": [
@@ -363,7 +363,7 @@ models/
 }
 ```
 
-### ** Model Architecture**
+### **Model Architecture**
 ```python
 # Ensemble Model Structure
 VotingClassifier(
@@ -393,7 +393,7 @@ StandardScaler() → VotingClassifier → TemperatureCalibration
 
 ##  **Security Architecture**
 
-### ** Security Layers**
+### **Security Layers**
 ```
  Security Architecture
 ├──  Network Security
@@ -424,7 +424,7 @@ StandardScaler() → VotingClassifier → TemperatureCalibration
 
 ##  **Performance Architecture**
 
-### ** Performance Optimization**
+### **Performance Optimization**
 ```
 Performance Layers
 ├──  Frontend Optimization
@@ -452,7 +452,7 @@ Performance Layers
     └── Streaming audio delivery
 ```
 
-### ** Performance Metrics**
+### **Performance Metrics**
 ```
  Performance Benchmarks
 ├──  Processing Speed
@@ -480,7 +480,7 @@ Performance Layers
 
 ##  **Deployment Architecture**
 
-### ** Production Deployment**
+### **Production Deployment**
 ```
  Deployment Architecture
 ├──  Frontend Deployment
@@ -508,7 +508,7 @@ Performance Layers
     └── User analytics
 ```
 
-### ** Development Environment**
+### **Development Environment**
 ```
  Development Setup
 ├──  Local Development
@@ -534,7 +534,7 @@ Performance Layers
 
 ##  **Communication Architecture**
 
-### ** Service Communication**
+### **Service Communication**
 ```
  Communication Flow
 ├──  Frontend ↔ API Gateway
@@ -566,7 +566,7 @@ Performance Layers
 
 ##  **Monitoring & Logging Architecture**
 
-### ** System Monitoring**
+### **System Monitoring**
 ```
  Monitoring Stack
 ├──  Application Metrics
@@ -598,25 +598,25 @@ Performance Layers
 
 ##  **Architecture Benefits**
 
-### ** Scalability**
+### **Scalability**
 - **Microservices**: Independent scaling of components
 - **Load balancing**: Horizontal scaling capability
 - **Caching**: Multi-layer caching strategy
 - **Async processing**: Non-blocking operations
 
-### ** Reliability**
+### **Reliability**
 - **Redundancy**: Multiple service instances
 - **Error handling**: Comprehensive error management
 - **Graceful degradation**: Fallback mechanisms
 - **Health monitoring**: Proactive issue detection
 
-### ** Performance**
+### **Performance**
 - **Optimized algorithms**: Efficient ML pipelines
 - **Caching**: Multi-level caching strategy
 - **Async processing**: Non-blocking operations
 - **Resource optimization**: Memory and CPU efficiency
 
-### ** Maintainability**
+### **Maintainability**
 - **Modular design**: Clear separation of concerns
 - **Documentation**: Comprehensive system docs
 - **Testing**: Extensive test coverage
@@ -626,19 +626,19 @@ Performance Layers
 
 ##  **Future Architecture Enhancements**
 
-### ** Scalability Improvements**
+### **Scalability Improvements**
 - **Distributed processing**: Multiple ML service instances
 - **Database sharding**: Horizontal data partitioning
 - **CDN integration**: Global content delivery
 - **Edge computing**: Localized processing
 
-### ** AI Enhancements**
+### **AI Enhancements**
 - **Deep learning models**: Transformer-based audio analysis
 - **Real-time processing**: Live audio stream analysis
 - **Personalization**: User-specific mood profiles
 - **Multi-modal analysis**: Lyrics + audio analysis
 
-### ** Infrastructure Improvements**
+### **Infrastructure Improvements**
 - **Kubernetes orchestration**: Container management
 - **Microservices mesh**: Service communication
 - **Event-driven architecture**: Async message passing
