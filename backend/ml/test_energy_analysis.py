@@ -31,7 +31,7 @@ with open('../../deam/audio/10.mp3', 'rb') as f:
         print('Energy analysis not available')
     
     print('\n=== Expected Frontend Display ===')
-    print('✅ Energy Analysis Box should show:')
-    print('✅ Energy percentage (e.g., "11.5%")')
-    print('✅ Analysis text based on energy level')
-    print('✅ "High energy" if > 0.5, "Low energy" if ≤ 0.5')
+    print('Energy Analysis Box should show:')
+    print('Energy percentage (e.g., "11.5%")')
+    print('Analysis text based on energy level')
+    print('"High energy" if > 0.5, "Low energy" if ≤ 0.5')
