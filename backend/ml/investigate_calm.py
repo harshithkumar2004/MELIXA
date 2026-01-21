@@ -3,7 +3,7 @@ import os
 import numpy as np
 
 # Deep dive into why calm predictions are not found
-print('=== CALM PREDICTION INVESTIGATION ===')
+print('CALM PREDICTION INVESTIGATION ')
 
 # First, let's check the model's prediction patterns
 test_files = []
@@ -41,7 +41,7 @@ for filename in test_files[:20]:  # Test first 20 files
     except Exception as e:
         print(f'Error with {filename}: {e}')
 
-print(f'\n=== MOOD DISTRIBUTION ===')
+print(f'\n MOOD DISTRIBUTION ')
 for mood, count in mood_counts.items():
     percentage = (count / 20) * 100
     print(f'{mood}: {count}/20 ({percentage:.1f}%)')
@@ -55,7 +55,7 @@ if all_probabilities:
     print(f'Calm probability > 0.4: {sum(1 for p in all_probabilities if p > 0.4)} files')
 
 # Let's check the model's bias by looking at class labels and prediction strategy
-print(f'\n=== MODEL ANALYSIS ===')
+print(f'\n MODEL ANALYSIS ')
 print('Checking model prediction patterns...')
 
 # Test with a few more files to see pattern
@@ -88,7 +88,7 @@ print('- Feature weighting in the model')
 print('- Prediction confidence thresholds')
 
 # Let's create a synthetic test to see what would trigger calm
-print(f'\n=== FEATURE ANALYSIS FOR CALM ===')
+print(f'\n FEATURE ANALYSIS FOR CALM ')
 print('Typical calm audio characteristics:')
 print('- Low tempo (< 100 BPM)')
 print('- Low energy (< 0.2 RMS)')
