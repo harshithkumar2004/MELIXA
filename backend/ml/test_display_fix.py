@@ -17,10 +17,10 @@ try:
         tempo = result['processing_info']['tempo']
         energy = result['processing_info']['energy']
         
-        print(f'📁 File: {test_file}')
-        print(f'🎭 Mood: {mood.upper()}')
-        print(f'🎵 Tempo: {tempo:.1f} BPM')
-        print(f'⚡ Energy: {energy:.4f} ({energy*100:.1f}%)')
+        print(f'File: {test_file}')
+        print(f'Mood: {mood.upper()}')
+        print(f'Tempo: {tempo:.1f} BPM')
+        print(f'Energy: {energy:.4f} ({energy*100:.1f}%)')
         
         # Test frontend logic
         tempo_analysis = 'Slow tempo detected, indicating calm or melancholic mood' if tempo < 120 else 'Upbeat tempo detected, indicating energetic or happy mood'
@@ -31,7 +31,7 @@ try:
         print(f'Energy Analysis: {energy*100:.1f}% - {energy_analysis}')
         
         # Check if analysis matches mood
-        print(f'\n✅ ANALYSIS ACCURACY:')
+        print(f'\n ANALYSIS ACCURACY:')
         if mood in ['energetic', 'happy']:
             expected_tempo = 'Upbeat'
             expected_energy = 'High'
@@ -51,8 +51,8 @@ try:
 except Exception as e:
     print(f'❌ Error: {e}')
 
-print('\n🎯 EXPECTED FRONTEND DISPLAY:')
-print('✅ Real tempo and energy values')
-print('✅ Correct tempo analysis based on 120 BPM threshold')
-print('✅ Correct energy analysis based on 15% threshold')
-print('✅ Proper data path: moodData.processing_info.tempo')
+print('\n EXPECTED FRONTEND DISPLAY:')
+print('Real tempo and energy values')
+print(' Correct tempo analysis based on 120 BPM threshold')
+print(' Correct energy analysis based on 15% threshold')
+print(' Proper data path: moodData.processing_info.tempo')
