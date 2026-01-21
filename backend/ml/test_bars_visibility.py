@@ -17,7 +17,7 @@ with open('../../deam/audio/10.mp3', 'rb') as f:
         bar_visual = '█' * (bar_width // 5) + '░' * (20 - bar_width // 5)
         print(f'{mood.upper():10}: {percentage:5.1f}% |{bar_visual}|')
     
-    print(f'\n=== Frontend Bar Properties ===')
+    print(f'\nFrontend Bar Properties')
     print(f'Bar Height: 20px (increased for visibility)')
     print(f'Bar Border: 2px solid rgba(139, 69, 19, 0.4)')
     print(f'Bar Fill: Gold gradient with shimmer effect')
