@@ -9,10 +9,8 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Enable CORS for all origins
 app.use(cors());
 
-// Configure multer for file uploads
 const upload = multer({ 
   dest: 'uploads/',
   limits: {
@@ -20,38 +18,31 @@ const upload = multer({
   }
 });
 
-// FastAPI ML service URL
 const ML_SERVICE_URL = process.env.ML_SERVICE_URL || 'http://localhost:8000';
 
-// Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ status: 'API Gateway is running', timestamp: new Date().toISOString() });
 });
 
-// Proxy prediction endpoint
 app.post('/predict', upload.single('audio'), async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({ error: 'No audio file provided' });
     }
 
-    // Create form data to forward to ML service
     const FormData = require('form-data');
     const formData = new FormData();
     formData.append('audio', fs.createReadStream(req.file.path), req.file.originalname);
 
-    // Forward request to FastAPI ML service
     const response = await axios.post(`${ML_SERVICE_URL}/predict`, formData, {
       headers: {
         ...formData.getHeaders(),
       },
-      timeout: 60000 // 60 second timeout
+      timeout: 60000 
     });
-
-    // Clean up uploaded file
+    
     fs.unlinkSync(req.file.path);
 
-    // Return the ML service response
     res.json(response.data);
 
   } catch (error) {
@@ -75,24 +66,20 @@ app.post('/predict', upload.single('audio'), async (req, res) => {
   }
 });
 
-// Proxy DEAM audio streaming endpoint
 app.get('/deam_audio/:filename', async (req, res) => {
   try {
     const { filename } = req.params;
     
-    // Stream audio from ML service
     const response = await axios.get(`${ML_SERVICE_URL}/deam_audio/${filename}`, {
       responseType: 'stream'
     });
 
-    // Set appropriate headers
     res.set({
       'Content-Type': 'audio/mpeg',
       'Accept-Ranges': 'bytes',
       'Cache-Control': 'no-cache'
     });
-
-    // Pipe the audio stream
+    
     response.data.pipe(res);
 
   } catch (error) {
@@ -108,7 +95,6 @@ app.get('/deam_audio/:filename', async (req, res) => {
   }
 });
 
-// Proxy info endpoints
 app.get('/api/info', async (req, res) => {
   try {
     const response = await axios.get(`${ML_SERVICE_URL}/api/info`);
@@ -129,19 +115,16 @@ app.get('/api/deam-info', async (req, res) => {
   }
 });
 
-// Create uploads directory if it doesn't exist
 const uploadsDir = path.join(__dirname, 'uploads');
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir);
 }
 
-// Start server
 app.listen(PORT, () => {
   console.log(`MELIXA API Gateway running on port ${PORT}`);
   console.log(`ML Service URL: ${ML_SERVICE_URL}`);
 });
 
-// Graceful shutdown
 process.on('SIGTERM', () => {
   console.log('SIGTERM received, shutting down gracefully');
   process.exit(0);
