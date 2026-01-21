@@ -18,7 +18,7 @@ print('Number of Estimators: 2')
 print('Weights: [2, 1]')
 print()
 
-# Get estimator details
+# Collect estimator details
 estimators = model.named_estimators_
 print('ESTIMATOR DETAILS:')
 
