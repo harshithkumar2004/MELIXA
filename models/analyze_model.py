@@ -11,7 +11,7 @@ scaler = bundle['scaler']
 print('=== BASE ML MODEL: ANTI-OVERFITTING MOOD CLASSIFIER ===')
 print()
 
-# Voting Classifier details
+# Details of the Voting Classifier
 print('MODEL TYPE: VotingClassifier (Ensemble)')
 print('Voting Method: soft (probability averaging)')
 print('Number of Estimators: 2')
