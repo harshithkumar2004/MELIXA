@@ -4,7 +4,7 @@ import json
 # Test a few audio files to check tempo/energy analysis
 test_files = ['2.mp3', '3.mp3', '4.mp3', '5.mp3', '10.mp3']
 
-print('🔍 TEMPO & ENERGY ANALYSIS VALIDATION')
+print('TEMPO & ENERGY ANALYSIS VALIDATION')
 print('=' * 50)
 
 for filename in test_files:
@@ -19,7 +19,7 @@ for filename in test_files:
             tempo = result['processing_info']['tempo']
             energy = result['processing_info']['energy']
             
-            print(f'\n📁 {filename}:')
+            print(f'\n {filename}:')
             print(f'   Mood: {mood.upper()} ({confidence}% confidence)')
             print(f'   Tempo: {tempo:.1f} BPM')
             print(f'   Energy: {energy:.4f} ({energy*100:.1f}%)')
@@ -58,10 +58,10 @@ for filename in test_files:
             print(f'   Frontend Energy: {frontend_energy_text}')
             
     except Exception as e:
-        print(f'❌ Error processing {filename}: {e}')
+        print(f'Error processing {filename}: {e}')
 
 print('\n' + '=' * 50)
-print('📊 ANALYSIS THRESHOLDS USED:')
+print(' ANALYSIS THRESHOLDS USED:')
 print('Tempo: < 120 BPM = Slow, >= 120 BPM = Upbeat')
 print('Energy: <= 0.5 = Low, > 0.5 = High')
 print()
