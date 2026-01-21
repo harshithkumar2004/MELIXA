@@ -83,14 +83,14 @@ To create an intelligent music analysis system that automatically detects the em
 
 ### **1. Audio Upload & Processing**
 
-#### ** Upload Functionality**
+#### **Upload Functionality**
 - **Drag & Drop Interface**: Intuitive file upload
 - **File Validation**: Audio format checking (MP3, WAV, FLAC)
 - **Progress Tracking**: Real-time processing feedback
 - **Error Handling**: Comprehensive error management
 - **File Size Support**: Up to 50MB audio files
 
-#### ** Feature Extraction Pipeline**
+#### **Feature Extraction Pipeline**
 ```python
 # 15 Acoustic Features Extracted
 1. Tempo (BPM) - Rhythmic characteristics
@@ -104,7 +104,7 @@ To create an intelligent music analysis system that automatically detects the em
 
 ### **2. Mood Classification System**
 
-#### ** Four Mood Categories**
+#### **Four Mood Categories**
 | **Mood** | **Characteristics** | **Typical Features** |
 |----------|-------------------|----------------------|
 | **Happy** | Upbeat, positive | High tempo, bright timbre |
@@ -112,7 +112,7 @@ To create an intelligent music analysis system that automatically detects the em
 | **Calm** | Relaxing, peaceful | Low tempo, smooth texture |
 | **Sad** | Melancholic, emotional | Low tempo, dark timbre |
 
-#### ** Enhanced Prediction Pipeline**
+#### **Enhanced Prediction Pipeline**
 - **ML Model**: VotingClassifier with ensemble methods
 - **Heuristic Logic**: Feature-based rule system
 - **Dynamic Weighting**: Confidence-based combination
@@ -120,14 +120,14 @@ To create an intelligent music analysis system that automatically detects the em
 
 ### **3. Recommendation Engine**
 
-#### ** Similarity-Based Matching**
+#### **Similarity-Based Matching**
 - **Algorithm**: Euclidean distance on 15 features
 - **Dataset**: 1,803 DEAM audio files
 - **Matching**: Top 10 most similar songs
 - **Streaming**: Direct audio playback
 - **Metadata**: Song titles and similarity scores
 
-#### ** Recommendation Features**
+#### **Recommendation Features**
 - **Real-time Matching**: Instant similarity calculation
 - **Audio Streaming**: Direct playback from dataset
 - **Similarity Scoring**: Percentage-based matching
@@ -136,14 +136,14 @@ To create an intelligent music analysis system that automatically detects the em
 
 ### **4. User Interface & Experience**
 
-#### ** Modern Web Interface**
+#### **Modern Web Interface**
 - **Clean Design**: Professional brown/gold theme
 - **Responsive Layout**: Works on all devices
 - **Interactive Elements**: Smooth animations and transitions
 - **Audio Controls**: Built-in playback functionality
 - **Visual Feedback**: Progress indicators and status updates
 
-#### ** Analysis Display**
+#### **Analysis Display**
 - **Mood Classification**: Clear mood display with confidence
 - **Probability Bars**: Visual mood breakdown
 - **Tempo Analysis**: Real BPM with descriptive analysis
@@ -171,14 +171,14 @@ To create an intelligent music analysis system that automatically detects the em
 
 ### **Dataset Processing Pipeline**
 
-#### ** Feature Extraction**
+#### **Feature Extraction**
 - **Audio Analysis**: Librosa-based feature extraction
 - **Normalization**: StandardScaler preprocessing
 - **Quality Control**: Feature validation and cleaning
 - **Storage**: Efficient JSON serialization
 - **Access**: Fast in-memory loading
 
-#### ** Recommendation System**
+#### **Recommendation System**
 - **Similarity Calculation**: Real-time feature comparison
 - **Top-K Selection**: Best matches identified
 - **URL Generation**: Direct streaming links
@@ -191,7 +191,7 @@ To create an intelligent music analysis system that automatically detects the em
 
 ### **Model Architecture**
 
-#### ** Ensemble Voting Classifier**
+#### **Ensemble Voting Classifier**
 ```python
 VotingClassifier(
     estimators=[
@@ -210,7 +210,7 @@ VotingClassifier(
 )
 ```
 
-#### ** Anti-Overfitting Measures**
+#### **Anti-Overfitting Measures**
 - **Regularization**: L2 penalty for LogisticRegression
 - **Early Stopping**: GradientBoosting with validation
 - **Cross-Validation**: 5-fold CV for hyperparameter tuning
@@ -219,12 +219,12 @@ VotingClassifier(
 
 ### **Enhanced Prediction System**
 
-#### ** Three-Method Prediction**
+#### **Three-Method Prediction**
 1. **ML Model Prediction**: Primary classification method
 2. **Heuristic Logic**: Feature-based rule system
 3. **Balanced Baseline**: Equal probability distribution
 
-#### ** Dynamic Weighting**
+#### **Dynamic Weighting**
 ```python
 # Confidence-based weight distribution
 if model_confidence > 0.6:  # High confidence
@@ -237,7 +237,7 @@ else:  # Low confidence
 
 ### **Happy Detection Enhancement**
 
-#### ** Optimized Heuristic Probabilities**
+#### **Optimized Heuristic Probabilities**
 | **Scenario** | **Conditions** | **Happy Prob** | **Enhancement** |
 |-------------|---------------|----------------|----------------|
 | **High Energy** | tempo > 0.7, energy > 0.5 | **0.4** | +0.2 from baseline |
@@ -246,7 +246,7 @@ else:  # Low confidence
 | **Bright Harmonic** | brightness > 0.6, harmonic > 0.5 | **0.5** | +0.2 from baseline |
 | **Balanced** | Default case | **0.35** | +0.1 from baseline |
 
-#### ** Enhancement Results**
+#### **Enhancement Results**
 - **Happy Predictions**: Increased from 11% to 44%
 - **Happy Probability Range**: 25-50% (strong bias)
 - **User Satisfaction**:  Optimized per feedback
@@ -288,14 +288,14 @@ else:  # Low confidence
 
 ### **Development Methodology**
 
-#### ** Agile Development**
+#### **Agile Development**
 - **Iterative Approach**: Continuous improvement cycles
 - **User Feedback**: Regular feedback incorporation
 - **Testing-Driven**: Comprehensive testing at each stage
 - **Documentation**: Ongoing documentation updates
 - **Quality Assurance**: Code reviews and validation
 
-#### ** Technical Decisions**
+#### **Technical Decisions**
 - **Ensemble Model**: Chosen for robustness and accuracy
 - **FastAPI**: Selected for performance and documentation
 - **React + Vite**: Chosen for development speed and performance
@@ -308,14 +308,14 @@ else:  # Low confidence
 
 ### **System Performance**
 
-#### ** Processing Speed**
+#### **Processing Speed**
 - **Audio Upload**: < 1 second
 - **Feature Extraction**: < 0.5 seconds
 - **ML Prediction**: < 0.1 seconds
 - **Recommendation Generation**: < 0.1 seconds
 - **Total Processing**: < 2 seconds
 
-#### ** Resource Usage**
+#### **Resource Usage**
 - **Frontend Memory**: ~50MB
 - **Backend Memory**: ~200MB
 - **CPU Usage**: ~15% peak
@@ -324,13 +324,13 @@ else:  # Low confidence
 
 ### **Model Performance**
 
-#### ** Classification Metrics**
+#### **Classification Metrics**
 - **Overall Accuracy**: 68.9%
 - **Happy Detection Rate**: 44.4%
 - **Confidence Range**: 26.68% - 37.29%
 - **Processing Time**: < 1 second per file
 
-#### ** Feature Performance**
+#### **Feature Performance**
 - **Feature Extraction**: 100% success rate
 - **Feature Quality**: High (15 acoustic features)
 - **Normalization**: Properly scaled
@@ -338,14 +338,14 @@ else:  # Low confidence
 
 ### **User Experience Metrics**
 
-#### ** Interface Performance**
+#### **Interface Performance**
 - **Page Load**: < 2 seconds
 - **Upload Response**: < 1 second
 - **Analysis Display**: < 2 seconds
 - **Audio Playback**: < 300ms start
 - **Error Rate**: < 1%
 
-#### ** User Satisfaction**
+#### **User Satisfaction**
 - **Happy Detection**:  Optimized per feedback
 - **Interface Design**:  Professional and clean
 - **Functionality**:  All features working
@@ -357,7 +357,7 @@ else:  # Low confidence
 
 ### **Frontend Implementation**
 
-#### ** Component Architecture**
+#### **Component Architecture**
 ```javascript
 // Main Components
 - Upload.jsx: File upload and processing
@@ -374,7 +374,7 @@ else:  # Low confidence
 - Audio Playback Controls
 ```
 
-#### ** State Management**
+#### **State Management**
 ```javascript
 // React Context for Audio
 const AudioContext = {
@@ -394,7 +394,7 @@ const [isUploading, setIsUploading] = useState(false)
 
 ### **Backend Implementation**
 
-#### ** API Endpoints**
+#### **API Endpoints**
 ```python
 # Main Endpoints
 @app.post("/predict")           # Audio analysis and mood prediction
@@ -407,7 +407,7 @@ def enhanced_predict(features)       # ML + heuristic prediction
 def recommend(features)             # Similarity-based recommendations
 ```
 
-#### ** Feature Extraction**
+#### **Feature Extraction**
 ```python
 # Audio Features (librosa)
 features = [
@@ -426,7 +426,7 @@ scaled_features = scaler.transform([features])
 
 ### **ML Model Implementation**
 
-#### ** Model Training**
+#### **Model Training**
 ```python
 # Ensemble Model
 model = VotingClassifier(
@@ -442,7 +442,7 @@ X_train, X_test, y_train, y_test = train_test_split(features, labels)
 model.fit(X_train, y_train)
 ```
 
-#### ** Enhanced Prediction**
+#### **Enhanced Prediction**
 ```python
 def enhanced_predict(features):
     # Method 1: ML Model
@@ -484,7 +484,7 @@ def enhanced_predict(features):
 - **Audio Streaming**: Direct playback from dataset
 - **API Design**: RESTful API with comprehensive documentation
 
-#### ** Performance Optimization**
+#### **Performance Optimization**
 - **Processing Speed**: Optimized to < 2 seconds
 - **Memory Efficiency**: Reduced to 200MB peak usage
 - **Model Accuracy**: Achieved 68.9% classification accuracy
@@ -493,14 +493,14 @@ def enhanced_predict(features):
 
 ### **User-Focused Achievements**
 
-#### ** Happy Detection Enhancement**
+#### **Happy Detection Enhancement**
 - **User Requirement**: Enhanced happy mood detection
 - **Implementation**: Iterative optimization process
 - **Result**: 25-50% happy probability range
 - **Satisfaction**:  Optimized per user feedback
 - **Balance**: Maintained across all mood categories
 
-#### ** Interface Excellence**
+#### **Interface Excellence**
 - **Professional Design**: Clean brown/gold theme
 - **Intuitive Navigation**: Easy-to-use interface
 - **Visual Feedback**: Clear progress indicators
@@ -509,14 +509,14 @@ def enhanced_predict(features):
 
 ### **Innovation Highlights**
 
-#### ** Enhanced Prediction System**
+#### **Enhanced Prediction System**
 - **Multi-Method Approach**: ML + heuristic + baseline
 - **Dynamic Weighting**: Confidence-based combination
 - **Happy Enhancement**: Custom heuristic optimization
 - **Anti-Overfitting**: Regularization and ensemble methods
 - **Real-time Performance**: Sub-second processing
 
-#### ** Comprehensive Testing**
+#### **Comprehensive Testing**
 - **System Testing**: 100% component validation
 - **Dataset Testing**: Complete feature extraction validation
 - **Model Testing**: Comprehensive ML model evaluation
@@ -573,14 +573,14 @@ def enhanced_predict(features):
 
 ### **Technical Documentation**
 
-#### ** Code Documentation**
+#### **Code Documentation**
 - **Inline Comments**: Comprehensive code explanations
 - **Function Documentation**: Clear parameter and return descriptions
 - **API Documentation**: Auto-generated FastAPI docs
 - **Component Documentation**: React component descriptions
 - **Model Documentation**: ML model architecture and parameters
 
-#### ** System Documentation**
+#### **System Documentation**
 - **Architecture Diagrams**: Visual system representation
 - **Data Flow Documentation**: End-to-end process explanation
 - **API Reference**: Complete endpoint documentation
@@ -589,14 +589,14 @@ def enhanced_predict(features):
 
 ### **User Documentation**
 
-#### ** User Guide**
+#### **User Guide**
 - **Getting Started**: Quick start instructions
 - **Feature Overview**: Complete functionality description
 - **Troubleshooting**: Common issues and solutions
 - **FAQ**: Frequently asked questions
 - **Support**: Contact information and resources
 
-#### ** Developer Documentation**
+#### **Developer Documentation**
 - **Setup Guide**: Development environment setup
 - **API Reference**: Complete endpoint documentation
 - **Database Schema**: Data structure documentation
@@ -609,14 +609,14 @@ def enhanced_predict(features):
 
 ### **Short-term Enhancements (Next 3 months)**
 
-#### ** Planned Improvements**
+#### **Planned Improvements**
 - **Real-time Audio Analysis**: Live audio stream processing
 - **Mobile Application**: React Native mobile app
 - **Advanced Visualizations**: Interactive mood charts
 - **Playlist Management**: Save and organize recommendations
 - **Social Features**: Share moods and recommendations
 
-#### ** Technical Improvements**
+#### **Technical Improvements**
 - **Model Optimization**: Deep learning model exploration
 - **Feature Expansion**: Additional acoustic features
 - **Performance Tuning**: Further speed optimizations
@@ -625,14 +625,14 @@ def enhanced_predict(features):
 
 ### **Long-term Vision (6-12 months)**
 
-#### ** Strategic Goals**
+#### **Strategic Goals**
 - **Multi-language Support**: International user base
 - **Advanced ML Models**: Transformer-based audio analysis
 - **Real-time Collaboration**: Multi-user mood analysis
 - **Integration Platform**: Third-party service integration
 - **Enterprise Features**: Business and commercial applications
 
-#### ** Research Directions**
+#### **Research Directions**
 - **Emotion Recognition**: Advanced emotion detection
 - **Personalization**: User-specific mood profiles
 - **Cross-cultural Analysis**: Cultural mood differences
@@ -645,14 +645,14 @@ def enhanced_predict(features):
 
 ### **Development Metrics**
 
-#### ** Code Statistics**
+#### **Code Statistics**
 - **Total Files**: 50+ source files
 - **Lines of Code**: 15,000+ lines
 - **Components**: 20+ React components
 - **API Endpoints**: 5+ FastAPI endpoints
 - **Test Coverage**: 95%+ coverage
 
-#### ** Performance Metrics**
+#### **Performance Metrics**
 - **Processing Speed**: < 2 seconds
 - **Memory Usage**: 200MB peak
 - **Accuracy**: 68.9% classification
@@ -661,14 +661,14 @@ def enhanced_predict(features):
 
 ### **Business Metrics**
 
-#### ** Project Success Indicators**
+#### **Project Success Indicators**
 - **Feature Completeness**: 100% of planned features
 - **User Requirements**: All requirements met
 - **Technical Excellence**: High-quality implementation
 - **Documentation**: Comprehensive and complete
 - **Maintainability**: Clean, well-structured code
 
-#### ** Quality Metrics**
+#### **Quality Metrics**
 - **Bug Count**: 0 critical bugs
 - **Test Coverage**: 95%+ code coverage
 - **Documentation**: Complete technical and user docs
@@ -681,14 +681,14 @@ def enhanced_predict(features):
 
 ### **Project Success Summary**
 
-#### ** Objectives Achieved**
+#### **Objectives Achieved**
 - **Real-time Audio Analysis**:  Sub-2-second processing
 - **Accurate Mood Detection**:  68.9% accuracy with enhanced happy detection
 - **Personalized Recommendations**:  1,803 songs with similarity matching
 - **Enhanced User Experience**:  Professional interface with drag-and-drop
 - **Optimized Happy Detection**:  25-50% probability range per user feedback
 
-#### ** Technical Excellence**
+#### **Technical Excellence**
 - **Full Stack Integration**:  Complete frontend-backend-ML pipeline
 - **Performance Optimization**:  Fast and efficient processing
 - **Robust Architecture**:  Scalable and maintainable system
@@ -697,14 +697,14 @@ def enhanced_predict(features):
 
 ### **Key Success Factors**
 
-#### ** Technical Factors**
+#### **Technical Factors**
 - **Ensemble ML Model**: Robust and accurate predictions
 - **Real-time Processing**: Fast and responsive system
 - **User-Centric Design**: Intuitive and professional interface
 - **Comprehensive Testing**: Thorough validation and quality assurance
 - **Documentation**: Complete and maintainable codebase
 
-#### ** Process Factors**
+#### **Process Factors**
 - **Agile Development**: Iterative improvement based on feedback
 - **User Involvement**: Continuous feedback incorporation
 - **Quality Focus**: High standards for all components
@@ -713,14 +713,14 @@ def enhanced_predict(features):
 
 ### **Impact and Value**
 
-#### ** Technical Impact**
+#### **Technical Impact**
 - **Innovation**: Advanced mood detection with happy enhancement
 - **Performance**: Sub-2-second audio analysis
 - **Scalability**: Production-ready architecture
 - **Maintainability**: Clean, well-documented codebase
 - **Extensibility**: Ready for future enhancements
 
-#### ** User Value**
+#### **User Value**
 - **Experience**: Intuitive and professional interface
 - **Functionality**: Complete mood analysis and recommendations
 - **Performance**: Fast and responsive system
@@ -731,14 +731,14 @@ def enhanced_predict(features):
 
 ##  Deployment Status
 
-### ** Production Readiness**
+### **Production Readiness**
 - **System Status**:  Fully operational
 - **Performance**:  Optimized and tested
 - **Documentation**:  Complete and comprehensive
 - **Quality Assurance**:  Thoroughly validated
 - **User Acceptance**:  Requirements met and exceeded
 
-### ** Next Steps**
+### **Next Steps**
 - **Deployment**: Ready for production deployment
 - **Monitoring**: Performance and usage tracking
 - **Maintenance**: Ongoing support and updates
@@ -749,14 +749,14 @@ def enhanced_predict(features):
 
 ##  Support and Maintenance
 
-### ** Ongoing Support**
+### **Ongoing Support**
 - **Technical Support**: Available for all components
 - **User Support**: Comprehensive help and documentation
 - **Maintenance**: Regular updates and improvements
 - **Monitoring**: Continuous performance tracking
 - **Enhancement**: Planned future developments
 
-### ** Contact Information**
+### **Contact Information**
 - **Development Team**: Available for technical questions
 - **User Support**: Comprehensive documentation and guides
 - **Issue Reporting**: Structured issue tracking and resolution
@@ -769,14 +769,14 @@ def enhanced_predict(features):
 
 ### **Project Rating**:  **EXCELLENT**
 
-#### ** Strengths**
+#### **Strengths**
 - **Complete Implementation**: All features fully functional
 - **High Performance**: Fast and efficient processing
 - **User Satisfaction**: Optimized per user feedback
 - **Technical Excellence**: Robust and well-architected
 - **Production Ready**: Ready for immediate deployment
 
-#### ** Achievements**
+#### **Achievements**
 - **Enhanced Happy Detection**: Successfully optimized per user requirements
 - **Real-time Processing**: Sub-2-second audio analysis achieved
 - **Professional Interface**: Clean and intuitive user experience
