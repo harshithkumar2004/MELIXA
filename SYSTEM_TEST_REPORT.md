@@ -135,7 +135,7 @@ The SmartPlay system has been successfully tested and is fully operational with 
 
 ### **3. Recommendation System Test**
 
-#### ** Recommendation Generation**
+#### **Recommendation Generation**
 - **Similarity Search**:  Working (Acoustic features)
 - **Song Matching**:  Working (Multiple recommendations)
 - **Streaming URLs**:  Working (Direct playback)
@@ -251,7 +251,7 @@ The SmartPlay system has been successfully tested and is fully operational with 
 
 ### **Overall Status**:  **PASS**
 
-#### ** Working Components**
+#### **Working Components**
 - **Frontend Interface**: 100% functional
 - **Backend API**: 100% functional
 - **ML Pipeline**: 100% functional
