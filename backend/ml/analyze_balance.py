@@ -110,5 +110,5 @@ for i, mood in enumerate(mood_names):
         print(f'{mood}: Highly variable (potential bias)')
 
 print('\n' + '=' * 50)
-print('🎯 SUMMARY: Perfect balance = 25% each mood across all scenarios')
-print('🎯 CURRENT: Check detailed analysis above for balance assessment')
+print('SUMMARY: Perfect balance = 25% each mood across all scenarios')
+print('CURRENT: Check detailed analysis above for balance assessment')
