@@ -14,7 +14,7 @@ cd MELIXA
 ```
 
 ### 2. Download Audio Files
-⚠️ **Important**: The audio files are not included in the repository due to size.
+ **Important**: The audio files are not included in the repository due to size.
 
 Download the DEAM audio files and place them in:
 ```
@@ -77,10 +77,10 @@ MELIXA/
 ```
 
 ## Features
-- 🎵 Real-time music mood prediction
-- 🎯 Personalized song recommendations
-- 📊 Audio feature analysis
-- 🌐 Modern web interface
-- 🔄 RESTful API architecture
+-  Real-time music mood prediction
+-  Personalized song recommendations
+-  Audio feature analysis
+-  Modern web interface
+-  RESTful API architecture
 
 Enjoy using MELIXA! 🎶
