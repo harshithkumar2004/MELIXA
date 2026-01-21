@@ -25,7 +25,7 @@ with open('../../deam/audio/10.mp3', 'rb') as f:
     print(f'Animation: 1.2s cubic-bezier transition')
     
     print('\n=== Expected Visual ===')
-    print('✅ Bars should be visible with gold gradient fill')
-    print('✅ Bars should have shimmer animation')
-    print('✅ Container should have gold/brown theme')
-    print('✅ Hover effects on individual mood items')
+    print('Bars should be visible with gold gradient fill')
+    print('Bars should have shimmer animation')
+    print('Container should have gold/brown theme')
+    print('Hover effects on individual mood items')
