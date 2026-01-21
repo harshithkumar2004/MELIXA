@@ -75,7 +75,7 @@ VotingClassifier(
 | 5 | **Zero Crossing Rate** | Signal sign changes/second | 0.01-0.15 | 7.2% |
 | 6-15 | **MFCCs (1-10)** | Mel-frequency cepstral coefficients | -20 to +20 | 29.6% |
 
-#### ** Feature Extraction Pipeline**
+#### **Feature Extraction Pipeline**
 ```python
 def extract_features(audio_path):
     """Extract 15 acoustic features using librosa"""
