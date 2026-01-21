@@ -4,7 +4,7 @@ print('MOOD BALANCE ANALYSIS')
 print('=' * 50)
 
 scenarios = {
-    'High Energy': [0.1, 0.5, 0.4, 0.1],      # calm, energetic, happy, sad
+    'High Energy': [0.1, 0.5, 0.4, 0.1],      
     'Moderate Energy': [0.2, 0.3, 0.5, 0.1],
     'Low Energy': [0.5, 0.1, 0.2, 0.3],
     'Bright Harmonic': [0.2, 0.3, 0.5, 0.1],
