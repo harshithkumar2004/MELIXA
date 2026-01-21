@@ -11,6 +11,7 @@ from recommender import recommend
 
 app = FastAPI()
 
+# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -26,22 +27,30 @@ async def predict(audio: UploadFile):
         path = tmp.name
 
     try:
+        # Extract features with improved quality
         feats = extract_features(path)
         
+        # Use enhanced prediction pipeline
         probs, scaled = enhanced_predict(feats)
         
+        # Get the predicted mood and confidence
         mood_index = probs.argmax()
         mood = class_labels[mood_index]
         confidence = round(probs[mood_index] * 100, 2)
         
+        # Extract tempo and energy from features for analysis
         tempo = float(feats[0][0])  # First feature is tempo
         energy = float(feats[0][1])  # Second feature is RMS energy
         
+        # Apply additional confidence smoothing
+        # If confidence is very low, apply minimum threshold
         if confidence < 30:
             confidence = max(confidence, 25.0)
-    
+        
+        # Get recommendations using original features (not scaled)
         recs = recommend(feats.flatten())
 
+        # Create response with enhanced probabilities
         response = {
             "mood": mood,
             "confidence": confidence,
