@@ -477,7 +477,7 @@ def enhanced_predict(features):
 
 ### **Technical Achievements**
 
-####  System Integration**
+####  **System Integration**
 - **Full Stack Development**: Complete frontend to backend integration
 - **Real-time Processing**: Sub-2-second audio analysis
 - **ML Pipeline**: End-to-end machine learning workflow
