@@ -83,4 +83,4 @@ MELIXA/
 -  Modern web interface
 -  RESTful API architecture
 
-Enjoy using MELIXA! 🎶
+Enjoy using MELIXA! 
